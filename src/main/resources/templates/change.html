@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaft.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Change</title>
+    </head>
+
+    <body>
+        <p>Different Page</p>
+        <span th:text="${toString}"></span>
+        <ol>
+            <th:block th:each="coffee : ${allCoffee}" th:object="${coffee}">
+                <li th:text="*{name}"></li>
+            </th:block>
+        </ol>
+    </body>
+</html>
